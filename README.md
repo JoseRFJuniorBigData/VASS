@@ -44,6 +44,7 @@ Para abordar el problema de predecir la probabilidad de deserción de los client
 
 
 ```
+
 import pandas as pd
 
 import numpy as np
@@ -61,6 +62,7 @@ Cargar el conjunto de datos y explorar su estructura:
 data = pd.read_csv("desercion.csv")
 print(data.head())
 print(data.info())
+
 
 '''
 
