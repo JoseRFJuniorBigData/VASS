@@ -1,5 +1,6 @@
 Usar Machine learning para reducir la deserción de clientes.
-Background
+
+## Background
 El Banco Central busca encontrar patrones ocultos en la información de sus clientes
 capturada por la interacción que tiene en su página web.
 Ha sido contratado para determinar el momento en el que se debe iniciar una acción de
@@ -21,14 +22,14 @@ cliente Identificador de cliente
 desercion Flag de deserción
 atributo 1 a 9 Features de interacción con la página web.
 
-Compute
+## Compute
 El dataset es lo suficientemente pequeño para trabajar en tu ordenador personal con
 herramientas opensource, como Jupyter Notebooks.
 Report
 Por favor entregar un documento PDF con los descubrimientos a través del proceso +
 código/o Markdown.
 
-Comments
+## Comments
 - Recuerde que los atributos 1 a 9 son features de interacción web, por lo cual están
 un poco codificados.
 - El dataset no está balanceado, por ello se requiere un análisis adicional para la
@@ -56,52 +57,56 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
 
 Cargar el conjunto de datos y explorar su estructura:
-```
 
-
-```
 data = pd.read_csv("desercion.csv")
 print(data.head())
 print(data.info())
 '''
 
-Preprocesamiento de datos:
-****
+## Preprocesamiento de datos:
+
 Verificar si hay valores faltantes y manejarlos si es necesario.
 Transformar la columna "fecha" en un formato adecuado si es necesario.
 Separar las características (atributos 1 a 9) de la variable objetivo (deserción).
 Realizar codificación o transformación adicional si es necesario en función de la codificación existente.
 Dividir el conjunto de datos en conjuntos de entrenamiento y prueba:
 
-python
-Copy code
+```
 X = data.drop(['desercion'], axis=1)
 y = data['desercion']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-Aquí se utiliza una proporción de 80% para entrenamiento y 20% para prueba, pero ten en cuenta que debido al desbalanceo en los datos, es posible que se necesite una estrategia adicional para dividir los conjuntos.
+```
 
-Realizar el escalado de características:
-python
-Copy code
+# Aquí se utiliza una proporción de 80% para entrenamiento y 20% para prueba, pero ten en cuenta que debido al desbalanceo en los datos, es posible # que se necesite una estrategia adicional para dividir los conjuntos.
+
+## Realizar el escalado de características:
+
+```
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
-El escalado es importante para asegurar que todas las características tengan la misma escala y evitar sesgos en el modelo.
+```
 
-Entrenar el modelo de clasificación:
-python
-Copy code
+# El escalado es importante para asegurar que todas las características tengan la misma escala y evitar sesgos en el modelo.
+
+
+# Entrenar el modelo de clasificación:
+
+```
 model = LogisticRegression()
 model.fit(X_train_scaled, y_train)
-Aquí se utiliza la regresión logística como modelo de clasificación, pero puedes experimentar con otros algoritmos de Machine Learning según tus necesidades.
+```
 
-Realizar predicciones en el conjunto de prueba:
-python
-Copy code
+# Aquí se utiliza la regresión logística como modelo de clasificación, pero puedes experimentar con otros algoritmos de Machine Learning según tus necesidades.
+
+# Realizar predicciones en el conjunto de prueba:
+
+```
 y_pred = model.predict(X_test_scaled)
-Evaluar el rendimiento del modelo utilizando diferentes métricas:
-python
-Copy code
+```
+# Evaluar el rendimiento del modelo utilizando diferentes métricas:
+
+```
 accuracy = accuracy_score(y_test, y_pred)
 precision = precision_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred)
@@ -113,10 +118,8 @@ print("Precision:", precision)
 print("Recall:", recall)
 print("F1 Score:", f1)
 print("ROC AUC Score:", roc_auc)
-Estas son solo algunas de las métricas comunes utilizadas para evaluar el rendimiento de los modelos de clasificación. Puedes ajustar las métricas según tus necesidades y los requisitos del problema.
+```
+# Estas son solo algunas de las métricas comunes utilizadas para evaluar el rendimiento de los modelos de clasificación. Puedes ajustar las métricas # según tus necesidades y los requisitos del problema.
 
 Además del código, se espera que entregues un informe en formato PDF que incluya tus descubrimientos y los pasos que has seguido para resolver el problema. Esto puede incluir una descripción detallada del preprocesamiento de datos, selección de características, elección del algoritmo de Machine Learning, estrategia de división de conjuntos de datos y explicación de las métricas utilizadas. También puedes incluir visualizaciones y gráficos relevantes para respaldar tus descubrimientos.
 
-Recuerda que estos pasos proporcionan un marco general para abordar el problema, y puedes adaptarlos o agregar pasos adicionales según tus necesidades específicas.# VASS
-# VASS
-# VASS
