@@ -44,7 +44,6 @@ Para abordar el problema de predecir la probabilidad de deserción de los client
 
 
 ```
-
 import pandas as pd
 
 import numpy as np
@@ -63,8 +62,8 @@ data = pd.read_csv("desercion.csv")
 print(data.head())
 print(data.info())
 
+```
 
-'''
 
 
 ## Preprocesamiento de datos:
@@ -75,21 +74,23 @@ Separar las características (atributos 1 a 9) de la variable objetivo (deserci�
 Realizar codificación o transformación adicional si es necesario en función de la codificación existente.
 Dividir el conjunto de datos en conjuntos de entrenamiento y prueba:
 
-
+```
 X = data.drop(['desercion'], axis=1)
 y = data['desercion']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
+```
 
 
 # Aquí se utiliza una proporción de 80% para entrenamiento y 20% para prueba, pero ten en cuenta que debido al desbalanceo en los datos, es posible # que se necesite una estrategia adicional para dividir los conjuntos.
 
 ## Realizar el escalado de características:
 
+```
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
+```
 
 
 # El escalado es importante para asegurar que todas las características tengan la misma escala y evitar sesgos en el modelo.
@@ -97,21 +98,22 @@ X_test_scaled = scaler.transform(X_test)
 
 # Entrenar el modelo de clasificación:
 
-
+```
 model = LogisticRegression()
 model.fit(X_train_scaled, y_train)
-
+```
 
 
 # Aquí se utiliza la regresión logística como modelo de clasificación, pero puedes experimentar con otros algoritmos de Machine Learning según tus necesidades.
 
 # Realizar predicciones en el conjunto de prueba:
 
-y_pred = model.predict(X_test_scaled)
+```y_pred = model.predict(X_test_scaled)
+```
 
 # Evaluar el rendimiento del modelo utilizando diferentes métricas:
 
-
+```
 accuracy = accuracy_score(y_test, y_pred)
 precision = precision_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred)
@@ -123,7 +125,7 @@ print("Precision:", precision)
 print("Recall:", recall)
 print("F1 Score:", f1)
 print("ROC AUC Score:", roc_auc)
-
+```
 
 # Estas son solo algunas de las métricas comunes utilizadas para evaluar el rendimiento de los modelos de clasificación. Puedes ajustar las métricas # según tus necesidades y los requisitos del problema.
 
