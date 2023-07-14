@@ -159,9 +159,7 @@ incluso sin comprender completamente los atributos, puede iterar a través del p
 Sin embargo, es importante señalar que tener una comprensión completa de los atributos ayudaría a mejorar la calidad del modelo y permitiría una interpretación más precisa de los resultados. Se recomienda buscar información adicional sobre los atributos o consultar con expertos en el dominio para obtener una comprensión más profunda y realizar un análisis más informado de los datos.
 
 ## CODE
-Para abordar el problema de predecir la probabilidad de deserción de los clientes y crear un modelo utilizando Machine Learning, puedes seguir los siguientes pasos:
 
-## Importar las bibliotecas necesarias:
 
 
 ```
