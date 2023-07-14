@@ -71,6 +71,19 @@ Selección de funciones: además de las columnas de interacción web, es importa
 
 Métricas de evaluación: además de las métricas estándar, como exactitud, precisión, recuperación y puntaje F1, puede considerar otras métricas específicas para problemas de clasificación desequilibrada. Algunas métricas útiles incluyen el área bajo la curva ROC (AUC-ROC) y la sensibilidad equilibrada (precisión equilibrada), que consideran la proporción de verdaderos positivos y verdaderos negativos de manera uniforme.
 
+
+O conjunto de dados possui as seguintes colunas: "fecha" (data), "cliente" (identificador do cliente), "desercion" (valor binário indicando deserção) e os atributos de "atributo1" a "atributo9".
+
+A coluna "cliente" parece ser um identificador único para cada cliente. Pode ser útil para identificar padrões específicos de deserção para clientes individuais.
+
+A coluna "desercion" é a coluna-alvo que indica se um cliente desertou ou não, com o valor 0 representando não deserção e 1 representando deserção.
+
+As colunas de "atributo1" a "atributo9" representam características do cliente ou de sua interação na web. No entanto, não temos informações sobre o que exatamente esses atributos representam, pois estão codificados. É importante obter mais informações sobre o significado desses atributos para realizar uma análise adequada.
+
+O conjunto de dados fornecido parece estar organizado por data (coluna "fecha"). Isso pode ser útil para identificar tendências ou padrões de deserção ao longo do tempo.
+
+Com base nessas observações, você pode seguir os passos mencionados anteriormente para pré-processar os dados, realizar a divisão em conjunto de treinamento e teste, treinar um modelo de aprendizado de máquina e avaliar seu desempenho. No entanto, lembre-se de que é necessário obter informações adicionais sobre o significado dos atributos para realizar uma análise mais precisa e relevante.
+
 ## CODE
 Para abordar el problema de predecir la probabilidad de deserción de los clientes y crear un modelo utilizando Machine Learning, puedes seguir los siguientes pasos:
 
