@@ -40,6 +40,8 @@ necesidad de explicar su línea de pensamiento para la solución del problema.
 ## Análisis y Solución
 ================================================================================
 
+![DATA](../img/1.png)
+
 Para abordar el problema de reducir la deserción de clientes utilizando Machine Learning, podemos seguir los siguientes pasos:
 
 1. Análisis exploratorio de datos: Comenzaremos explorando el dataset "desercion.csv" para comprender mejor la estructura de los datos y realizar algunas visualizaciones. Esto nos ayudará a obtener información sobre la distribución de las variables, identificar valores atípicos y comprender la relación entre las características y la variable objetivo "desercion".
