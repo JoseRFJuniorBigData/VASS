@@ -112,6 +112,27 @@ compruebe si existe una correlación entre los atributos 1-9 y la columna de def
 # Ingeniería de funciones: 
 incluso sin conocer el significado exacto de los atributos, puede intentar crear nuevas funciones en función de la información disponible. Por ejemplo, puede crear funciones de agregación como promedio, suma, mínimo o máximo para los atributos existentes. Estas nuevas características pueden proporcionar una idea del patrón de deserción.
 
+## Agregación estadística: 
+ puede calcular varias estadísticas descriptivas de los atributos existentes, como la media, la mediana, la desviación estándar, el mínimo, el máximo y el conteo. Estas estadísticas pueden proporcionar información resumida sobre atributos y ayudar a capturar patrones relevantes.
+
+## Relaciones temporales: 
+dado que el conjunto de datos está organizado por fecha, puede explotar las relaciones temporales para crear características. Por ejemplo, puede calcular el promedio o la suma de atributos durante un período de tiempo anterior a la fecha actual para capturar tendencias de tiempo.
+
+## Creación de índices: 
+en función de los atributos disponibles, puede crear índices o proporciones que representen una relación entre diferentes atributos. Por ejemplo, la relación entre dos atributos o la diferencia entre ellos puede proporcionar información adicional sobre el comportamiento del cliente.
+
+## Codificación de datos categóricos: 
+si hay atributos categóricos en los datos, puede aplicar técnicas de codificación adecuadas, como la codificación one-hot, para representar estos atributos numéricamente e incorporarlos al modelo.
+
+## Interacción entre atributos: 
+Puede crear características que representen la interacción entre diferentes atributos. Por ejemplo, puede multiplicar o combinar dos atributos para crear una nueva característica que capture su interdependencia.
+
+## Transformaciones matemáticas: 
+en algunos casos, la aplicación de transformaciones matemáticas a los atributos existentes puede revelar patrones o hacer que los datos sean más adecuados para el modelado. Por ejemplo, aplicar el logaritmo o la raíz cuadrada puede ayudar a lidiar con distribuciones sesgadas.
+
+## Binning: 
+si los atributos continuos tienen una amplia gama de valores, puede agruparlos en intervalos discretos (binning) y crear entidades que representen estos intervalos. Esto puede ayudar a capturar información sobre diferentes rangos de valores.
+
 # Experimentación y evaluación iterativa: 
 incluso sin comprender completamente los atributos, puede iterar a través del proceso de entrenamiento del modelo y evaluar su rendimiento. Al realizar múltiples iteraciones, puede ajustar hiperparámetros, probar diferentes algoritmos de aprendizaje automático y explorar diferentes técnicas para preprocesar los datos. Esto puede ayudar a identificar qué atributos tienen el mayor impacto en la predicción de la deserción, incluso sin conocer su significado exacto.
 
