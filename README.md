@@ -87,6 +87,19 @@ El conjunto de datos dado parece estar organizado por fecha (columna "cierra"). 
 
 En función de estas observaciones, puede seguir los pasos mencionados anteriormente para preprocesar los datos, realizar el entrenamiento y la división del conjunto de pruebas, entrenar un modelo de aprendizaje automático y evaluar su rendimiento. Sin embargo, tenga en cuenta que se requiere información adicional sobre el significado de los atributos para realizar un análisis más preciso y relevante.
 
+Entrenar un modelo sin conocer el significado exacto de los atributos 1-9 puede ser un desafío, ya que la falta de comprensión de estos atributos puede dificultar la interpretación de los resultados y limitar la efectividad del modelo. Sin embargo, es posible realizar un análisis exploratorio de los datos para intentar comprender el patrón de deserción a partir de la información disponible.
+
+# Análisis de correlación: 
+compruebe si existe una correlación entre los atributos 1-9 y la columna de defectos. Puede utilizar técnicas como el coeficiente de correlación de Pearson o la prueba de correlación de rango para evaluar la asociación entre estos atributos y la deserción del cliente.
+
+# Ingeniería de funciones: 
+incluso sin conocer el significado exacto de los atributos, puede intentar crear nuevas funciones en función de la información disponible. Por ejemplo, puede crear funciones de agregación como promedio, suma, mínimo o máximo para los atributos existentes. Estas nuevas características pueden proporcionar una idea del patrón de deserción.
+
+# Experimentación y evaluación iterativa: 
+incluso sin comprender completamente los atributos, puede iterar a través del proceso de entrenamiento del modelo y evaluar su rendimiento. Al realizar múltiples iteraciones, puede ajustar hiperparámetros, probar diferentes algoritmos de aprendizaje automático y explorar diferentes técnicas para preprocesar los datos. Esto puede ayudar a identificar qué atributos tienen el mayor impacto en la predicción de la deserción, incluso sin conocer su significado exacto.
+
+Sin embargo, es importante señalar que tener una comprensión completa de los atributos ayudaría a mejorar la calidad del modelo y permitiría una interpretación más precisa de los resultados. Se recomienda buscar información adicional sobre los atributos o consultar con expertos en el dominio para obtener una comprensión más profunda y realizar un análisis más informado de los datos.
+
 ## CODE
 Para abordar el problema de predecir la probabilidad de deserción de los clientes y crear un modelo utilizando Machine Learning, puedes seguir los siguientes pasos:
 
