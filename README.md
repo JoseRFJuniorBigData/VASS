@@ -165,64 +165,6 @@ Para abordar el problema de predecir la probabilidad de deserción de los client
 
 
 ```
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
 
-# Carregar os dados
-data = pd.read_csv('desercion.csv')
-
-# Separar os atributos e a variável alvo
-X = data.drop(['desercion'], axis=1)
-y = data['desercion']
-
-# Pré-processamento dos dados
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
-
-# Divisão dos dados em treinamento e teste
-X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
-
-# Construção do modelo de Regressão Logística
-model = LogisticRegression()
-model.fit(X_train, y_train)
-
-# Realizar previsões
-y_pred = model.predict(X_test)
-y_pred_proba = model.predict_proba(X_test)[:, 1]
-
-# Avaliação do modelo
-accuracy = accuracy_score(y_test, y_pred)
-precision = precision_score(y_test, y_pred)
-recall = recall_score(y_test, y_pred)
-f1 = f1_score(y_test, y_pred)
-auc_roc = roc_auc_score(y_test, y_pred_proba)
-
-# Exibir as métricas
-print("Acurácia:", accuracy)
-print("Precisão:", precision)
-print("Recall:", recall)
-print("F1-Score:", f1)
-print("AUC-ROC:", auc_roc)
 ```
 
-## Explicaciones de las métricas utilizadas en el ejemplo:
-
-# 1. Acuracia (Accuracy): 
-La precisión es la proporción de predicciones correctas en relación al total de predicciones. Mide la tasa general de aciertos del modelo.
-
-# 2. Precisión (Precision): 
-La precisión es la proporción de verdaderos positivos (TP) en relación a la suma de verdaderos positivos y falsos positivos (FP). Mide la capacidad del modelo de no clasificar erróneamente las instancias negativas como positivas. Una alta precisión indica una baja tasa de falsos positivos.
-
-# 3. Recall (Recuperación o Sensibilidad) (Recall): 
-El recall es la proporción de verdaderos positivos (TP) en relación a la suma de verdaderos positivos y falsos negativos (FN). Mide la capacidad del modelo de encontrar correctamente las instancias positivas. Un alto recall indica una baja tasa de falsos negativos.
-
-# 4. F1-Score: 
-El F1-Score es la media armónica de la precisión y el recall. Proporciona una medida de rendimiento equilibrada entre la precisión y el recall. El F1-Score es útil cuando hay un desequilibrio significativo entre las clases.
-
-# 5. AUC-ROC (Área Bajo la Curva de Característica Operativa del Receptor): 
-El AUC-ROC es una métrica que evalúa la calidad del modelo en problemas de clasificación binaria. Representa el área bajo la curva ROC, que es un gráfico de la tasa de verdaderos positivos (TPR) en relación a la tasa de falsos positivos (FPR) en diferentes puntos de corte. Un AUC-ROC cercano a 1 indica un modelo con alta capacidad para distinguir entre las clases positiva y negativa.
-
-Estas métricas se utilizan comúnmente para evaluar el rendimiento de modelos de clasificación binaria. Es importante tener en cuenta que la elección de las métricas a utilizar depende del contexto y los objetivos del proyecto. Además, las métricas deben interpretarse en conjunto para obtener una visión integral del rendimiento del modelo.
