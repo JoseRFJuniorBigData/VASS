@@ -44,24 +44,32 @@ necesidad de explicar su línea de pensamiento para la solución del problema.
 
 Para abordar el problema de reducir la deserción de clientes utilizando Machine Learning, podemos seguir los siguientes pasos:
 
-1. Análisis exploratorio de datos: Comenzaremos explorando el dataset "desercion.csv" para comprender mejor la estructura de los datos y realizar algunas visualizaciones. Esto nos ayudará a obtener información sobre la distribución de las variables, identificar valores atípicos y comprender la relación entre las características y la variable objetivo "desercion".
+# 1. Análisis exploratorio de datos: 
+Comenzaremos explorando el dataset "desercion.csv" para comprender mejor la estructura de los datos y realizar algunas visualizaciones. Esto nos ayudará a obtener información sobre la distribución de las variables, identificar valores atípicos y comprender la relación entre las características y la variable objetivo "desercion".
 
-2. Preprocesamiento de datos: En esta etapa, realizaremos las siguientes tareas:
+# 2. Preprocesamiento de datos: 
+En esta etapa, realizaremos las siguientes tareas:
    - Manejo de datos faltantes: Verificaremos si existen valores faltantes en el dataset y decidiremos cómo manejarlos (por ejemplo, imputación de valores faltantes o eliminación de filas/columnas).
    - Codificación de variables: Si los atributos 1 a 9 están codificados, podemos realizar una decodificación para comprender mejor su significado y facilitar su interpretación durante el modelado.
    - Balanceo de datos: Dado que el dataset no está balanceado en términos de la variable objetivo, debemos considerar estrategias para equilibrar los datos antes de entrenar el modelo. Esto podría implicar técnicas como submuestreo de la clase mayoritaria o sobremuestreo de la clase minoritaria.
 
-3. Selección de características: Analizaremos las características disponibles en el dataset y evaluaremos su relevancia para predecir la deserción de los clientes. Podemos utilizar técnicas de selección de características, como la correlación con la variable objetivo o modelos de selección automática de características, para determinar las características más importantes.
+# 3. Selección de características: 
+Analizaremos las características disponibles en el dataset y evaluaremos su relevancia para predecir la deserción de los clientes. Podemos utilizar técnicas de selección de características, como la correlación con la variable objetivo o modelos de selección automática de características, para determinar las características más importantes.
 
-4. División de datos: Dividiremos el dataset en conjuntos de entrenamiento y prueba. Dado que se menciona que no solo se debe considerar la fecha para la división de datos, podemos utilizar técnicas como la selección aleatoria estratificada o la división temporal combinada con otros criterios.
+# 4. División de datos: 
+Dividiremos el dataset en conjuntos de entrenamiento y prueba. Dado que se menciona que no solo se debe considerar la fecha para la división de datos, podemos utilizar técnicas como la selección aleatoria estratificada o la división temporal combinada con otros criterios.
 
-5. Construcción del modelo: Utilizaremos algoritmos de Machine Learning para construir un modelo predictivo de la probabilidad de deserción de los clientes. Algunos algoritmos comunes que podrían ser adecuados para este problema incluyen Regresión Logística, Árboles de Decisión, Bosques Aleatorios o Gradient Boosting. Seleccionaremos el algoritmo y ajustaremos los hiperparámetros utilizando técnicas como la validación cruzada y la búsqueda en cuadrícula para optimizar el rendimiento del modelo.
+# 5. Construcción del modelo: 
+Utilizaremos algoritmos de Machine Learning para construir un modelo predictivo de la probabilidad de deserción de los clientes. Algunos algoritmos comunes que podrían ser adecuados para este problema incluyen Regresión Logística, Árboles de Decisión, Bosques Aleatorios o Gradient Boosting. Seleccionaremos el algoritmo y ajustaremos los hiperparámetros utilizando técnicas como la validación cruzada y la búsqueda en cuadrícula para optimizar el rendimiento del modelo.
 
-6. Evaluación del modelo: Evaluaremos el modelo utilizando métricas apropiadas para problemas de clasificación binaria, como precisión, recall, F1-score y área bajo la curva ROC (AUC-ROC). También podemos generar una matriz de confusión para tener una visión más detallada de las predicciones del modelo.
+# 6. Evaluación del modelo: 
+Evaluaremos el modelo utilizando métricas apropiadas para problemas de clasificación binaria, como precisión, recall, F1-score y área bajo la curva ROC (AUC-ROC). También podemos generar una matriz de confusión para tener una visión más detallada de las predicciones del modelo.
 
-7. Interpretación del modelo: Si es posible, trataremos de interpretar el modelo para comprender qué características son más influyentes en las predicciones de deserción. Esto puede ayudar a obtener información adicional sobre los factores que contribuyen a la deserción de los clientes.
+# 7. Interpretación del modelo: 
+Si es posible, trataremos de interpretar el modelo para comprender qué características son más influyentes en las predicciones de deserción. Esto puede ayudar a obtener información adicional sobre los factores que contribuyen a la deserción de los clientes.
 
-8. Implementación y seguimiento: Una vez que hayamos construido y evaluado el modelo, podremos implementarlo en producción y utilizarlo para predecir la probabilidad de deserción de nuevos clientes. Es importante realizar un seguimiento y evaluación periódicos para asegurarse de que el modelo sigue siendo efectivo a medida que los datos cambian con el tiempo.
+# 8. Implementación y seguimiento: 
+Una vez que hayamos construido y evaluado el modelo, podremos implementarlo en producción y utilizarlo para predecir la probabilidad de deserción de nuevos clientes. Es importante realizar un seguimiento y evaluación periódicos para asegurarse de que el modelo sigue siendo efectivo a medida que los datos cambian con el tiempo.
 
 Para llevar a cabo este proyecto, puedes utilizar bibliotecas de Python como pandas, scikit-learn y matplotlib/seaborn para el análisis exploratorio de datos, preprocesamiento, construcción del modelo y evaluación. También puedes utilizar Jupyter Notebooks para documentar y presentar tu trabajo en forma de código y markdown.
 
@@ -152,14 +160,19 @@ print("AUC-ROC:", auc_roc)
 
 ## Explicaciones de las métricas utilizadas en el ejemplo:
 
-1. Acuracia (Accuracy): La precisión es la proporción de predicciones correctas en relación al total de predicciones. Mide la tasa general de aciertos del modelo.
+# 1. Acuracia (Accuracy): 
+La precisión es la proporción de predicciones correctas en relación al total de predicciones. Mide la tasa general de aciertos del modelo.
 
-2. Precisión (Precision): La precisión es la proporción de verdaderos positivos (TP) en relación a la suma de verdaderos positivos y falsos positivos (FP). Mide la capacidad del modelo de no clasificar erróneamente las instancias negativas como positivas. Una alta precisión indica una baja tasa de falsos positivos.
+# 2. Precisión (Precision): 
+La precisión es la proporción de verdaderos positivos (TP) en relación a la suma de verdaderos positivos y falsos positivos (FP). Mide la capacidad del modelo de no clasificar erróneamente las instancias negativas como positivas. Una alta precisión indica una baja tasa de falsos positivos.
 
-3. Recall (Recuperación o Sensibilidad) (Recall): El recall es la proporción de verdaderos positivos (TP) en relación a la suma de verdaderos positivos y falsos negativos (FN). Mide la capacidad del modelo de encontrar correctamente las instancias positivas. Un alto recall indica una baja tasa de falsos negativos.
+# 3. Recall (Recuperación o Sensibilidad) (Recall): 
+El recall es la proporción de verdaderos positivos (TP) en relación a la suma de verdaderos positivos y falsos negativos (FN). Mide la capacidad del modelo de encontrar correctamente las instancias positivas. Un alto recall indica una baja tasa de falsos negativos.
 
-4. F1-Score: El F1-Score es la media armónica de la precisión y el recall. Proporciona una medida de rendimiento equilibrada entre la precisión y el recall. El F1-Score es útil cuando hay un desequilibrio significativo entre las clases.
+# 4. F1-Score: 
+El F1-Score es la media armónica de la precisión y el recall. Proporciona una medida de rendimiento equilibrada entre la precisión y el recall. El F1-Score es útil cuando hay un desequilibrio significativo entre las clases.
 
-5. AUC-ROC (Área Bajo la Curva de Característica Operativa del Receptor): El AUC-ROC es una métrica que evalúa la calidad del modelo en problemas de clasificación binaria. Representa el área bajo la curva ROC, que es un gráfico de la tasa de verdaderos positivos (TPR) en relación a la tasa de falsos positivos (FPR) en diferentes puntos de corte. Un AUC-ROC cercano a 1 indica un modelo con alta capacidad para distinguir entre las clases positiva y negativa.
+# 5. AUC-ROC (Área Bajo la Curva de Característica Operativa del Receptor): 
+El AUC-ROC es una métrica que evalúa la calidad del modelo en problemas de clasificación binaria. Representa el área bajo la curva ROC, que es un gráfico de la tasa de verdaderos positivos (TPR) en relación a la tasa de falsos positivos (FPR) en diferentes puntos de corte. Un AUC-ROC cercano a 1 indica un modelo con alta capacidad para distinguir entre las clases positiva y negativa.
 
 Estas métricas se utilizan comúnmente para evaluar el rendimiento de modelos de clasificación binaria. Es importante tener en cuenta que la elección de las métricas a utilizar depende del contexto y los objetivos del proyecto. Además, las métricas deben interpretarse en conjunto para obtener una visión integral del rendimiento del modelo.
