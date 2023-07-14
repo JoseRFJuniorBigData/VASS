@@ -115,6 +115,26 @@ incluso sin conocer el significado exacto de los atributos, puede intentar crear
 ## Agregación estadística: 
  puede calcular varias estadísticas descriptivas de los atributos existentes, como la media, la mediana, la desviación estándar, el mínimo, el máximo y el conteo. Estas estadísticas pueden proporcionar información resumida sobre atributos y ayudar a capturar patrones relevantes.
 
+ <img src="./img/2.png" alt="Agregación Estadística">
+   
+   Identifique atributos relevantes: 
+   comience identificando qué atributos desea agregar estadísticamente. Esto puede incluir los atributos numéricos disponibles en el conjunto de datos.
+
+   Seleccione estadísticas para calcular: 
+   elija estadísticas que sean relevantes para su problema. Algunos ejemplos comunes incluyen media, mediana, desviación estándar, mínimo, máximo y conteo. También puede considerar otras estadísticas específicas, según el contexto y los datos.
+
+   Agrupe los datos: 
+   según la estructura de los datos, es posible que deba agrupar los datos según algunos criterios, como el cliente o el período de tiempo. Por ejemplo, puede calcular estadísticas agregadas para cada cliente o para cada mes.
+
+   Calcular estadísticas: 
+   aplica estadísticas seleccionadas a datos agrupados. Utilice funciones estadísticas disponibles en bibliotecas como pandas para calcular las estadísticas deseadas. Por ejemplo, puede usar la función mean() para calcular la media, std() para la desviación estándar y count() para el conteo.
+
+   Crear características agregadas: 
+   según las estadísticas calculadas, cree nuevas características agregadas para cada grupo. Estas características se agregarán al conjunto de datos como nuevas columnas. Por ejemplo, podría tener una nueva columna llamada "atributo1_promedio" que represente el promedio de "atributo1" para cada cliente.
+   
+
+   Uso de las características agregadas en el modelo: ahora que ha creado las características agregadas, puede usarlas para entrenar el modelo. Estas nuevas funciones pueden proporcionar información útil para predecir la deserción de clientes y mejorar el rendimiento del modelo.
+
 ## Relaciones temporales: 
 dado que el conjunto de datos está organizado por fecha, puede explotar las relaciones temporales para crear características. Por ejemplo, puede calcular el promedio o la suma de atributos durante un período de tiempo anterior a la fecha actual para capturar tendencias de tiempo.
 
