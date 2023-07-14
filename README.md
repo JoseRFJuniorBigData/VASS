@@ -71,18 +71,17 @@ Selección de funciones: además de las columnas de interacción web, es importa
 
 Métricas de evaluación: además de las métricas estándar, como exactitud, precisión, recuperación y puntaje F1, puede considerar otras métricas específicas para problemas de clasificación desequilibrada. Algunas métricas útiles incluyen el área bajo la curva ROC (AUC-ROC) y la sensibilidad equilibrada (precisión equilibrada), que consideran la proporción de verdaderos positivos y verdaderos negativos de manera uniforme.
 
+El conjunto de datos tiene las siguientes columnas: "cierres" (datos), "cliente" (identificador de cliente), "deserción" (valor binario que indica deserción) y atributos desde "atributo1" a "atributo9".
 
-O conjunto de dados possui as seguintes colunas: "fecha" (data), "cliente" (identificador do cliente), "desercion" (valor binário indicando deserção) e os atributos de "atributo1" a "atributo9".
+La columna "cliente" parece ser un identificador único para cada cliente. Puede ser útil identificar patrones específicos de deserción para clientes individuales.
 
-A coluna "cliente" parece ser um identificador único para cada cliente. Pode ser útil para identificar padrões específicos de deserção para clientes individuais.
+La columna "deserción" es la columna de destino que indica si un cliente ha desertado o no, con el valor 0 que representa ninguna deserción y 1 representa la deserción.
 
-A coluna "desercion" é a coluna-alvo que indica se um cliente desertou ou não, com o valor 0 representando não deserção e 1 representando deserção.
+Las columnas de "atributo1" a "atributo9" representan características del cliente o su interacción en la web. Sin embargo, no tenemos información sobre qué representan exactamente estos atributos tal como están codificados. Es importante obtener más información sobre el significado de estos atributos para realizar un análisis adecuado.
 
-As colunas de "atributo1" a "atributo9" representam características do cliente ou de sua interação na web. No entanto, não temos informações sobre o que exatamente esses atributos representam, pois estão codificados. É importante obter mais informações sobre o significado desses atributos para realizar uma análise adequada.
+El conjunto de datos dado parece estar organizado por fecha (columna "cierra"). Esto puede ser útil para identificar tendencias o patrones de deserción a lo largo del tiempo.
 
-O conjunto de dados fornecido parece estar organizado por data (coluna "fecha"). Isso pode ser útil para identificar tendências ou padrões de deserção ao longo do tempo.
-
-Com base nessas observações, você pode seguir os passos mencionados anteriormente para pré-processar os dados, realizar a divisão em conjunto de treinamento e teste, treinar um modelo de aprendizado de máquina e avaliar seu desempenho. No entanto, lembre-se de que é necessário obter informações adicionais sobre o significado dos atributos para realizar uma análise mais precisa e relevante.
+En función de estas observaciones, puede seguir los pasos mencionados anteriormente para preprocesar los datos, realizar el entrenamiento y la división del conjunto de pruebas, entrenar un modelo de aprendizaje automático y evaluar su rendimiento. Sin embargo, tenga en cuenta que se requiere información adicional sobre el significado de los atributos para realizar un análisis más preciso y relevante.
 
 ## CODE
 Para abordar el problema de predecir la probabilidad de deserción de los clientes y crear un modelo utilizando Machine Learning, puedes seguir los siguientes pasos:
