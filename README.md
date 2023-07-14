@@ -15,7 +15,8 @@ La idea es validar cómo se aborda la solución del problema y las técnicas usa
 procesar la información en python.
 Data
 Usar dataset “desercion.csv”.
-Metadata
+
+## Metadata
 Columna Descripcion
 fecha fecha en formato “YYYY-MM-DD
 cliente Identificador de cliente
@@ -49,9 +50,12 @@ Comenzaremos explorando el dataset "desercion.csv" para comprender mejor la estr
 
 # 2. Preprocesamiento de datos: 
 En esta etapa, realizaremos las siguientes tareas:
-   - Manejo de datos faltantes: Verificaremos si existen valores faltantes en el dataset y decidiremos cómo manejarlos (por ejemplo, imputación de valores faltantes o eliminación de filas/columnas).
-   - Codificación de variables: Si los atributos 1 a 9 están codificados, podemos realizar una decodificación para comprender mejor su significado y facilitar su interpretación durante el modelado.
-   - Balanceo de datos: Dado que el dataset no está balanceado en términos de la variable objetivo, debemos considerar estrategias para equilibrar los datos antes de entrenar el modelo. Esto podría implicar técnicas como submuestreo de la clase mayoritaria o sobremuestreo de la clase minoritaria.
+   ## - Manejo de datos faltantes: 
+   Verificaremos si existen valores faltantes en el dataset y decidiremos cómo manejarlos (por ejemplo, imputación de valores faltantes o eliminación de filas/columnas).
+   ## - Codificación de variables: 
+   Si los atributos 1 a 9 están codificados, podemos realizar una decodificación para comprender mejor su significado y facilitar su interpretación durante el modelado.
+   ## - Balanceo de datos: 
+   Dado que el dataset no está balanceado en términos de la variable objetivo, debemos considerar estrategias para equilibrar los datos antes de entrenar el modelo. Esto podría implicar técnicas como submuestreo de la clase mayoritaria o sobremuestreo de la clase minoritaria.
 
 # 3. Selección de características: 
 Analizaremos las características disponibles en el dataset y evaluaremos su relevancia para predecir la deserción de los clientes. Podemos utilizar técnicas de selección de características, como la correlación con la variable objetivo o modelos de selección automática de características, para determinar las características más importantes.
