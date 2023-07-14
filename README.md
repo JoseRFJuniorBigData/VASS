@@ -37,6 +37,7 @@ selección de train-test, no sólo por criterios de fecha.
 - No hay una limitación para la estrategia de análisis, sólo se debe recordar la
 necesidad de explicar su línea de pensamiento para la solución del problema.
 
+## Análisis y Solución
 ================================================================================
 Para abordar el problema de reducir la deserción de clientes utilizando Machine Learning, podemos seguir los siguientes pasos:
 
