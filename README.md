@@ -40,7 +40,7 @@ necesidad de explicar su línea de pensamiento para la solución del problema.
 ## Análisis y Solución
 ================================================================================
 
-<img src="../img/1.png" alt="DATA">
+<img src="./img/1.png" alt="DATA">
 
 Para abordar el problema de reducir la deserción de clientes utilizando Machine Learning, podemos seguir los siguientes pasos:
 
