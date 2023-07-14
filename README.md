@@ -135,7 +135,7 @@ print("F1-Score:", f1)
 print("AUC-ROC:", auc_roc)
 ```
 
-## explicaciones de las métricas utilizadas en el ejemplo:
+## Explicaciones de las métricas utilizadas en el ejemplo:
 
 1. Acuracia (Accuracy): La precisión es la proporción de predicciones correctas en relación al total de predicciones. Mide la tasa general de aciertos del modelo.
 
