@@ -78,14 +78,19 @@ Una vez que hayamos construido y evaluado el modelo, podremos implementarlo en p
 Para llevar a cabo este proyecto, puedes utilizar bibliotecas de Python como pandas, scikit-learn y matplotlib/seaborn para el análisis exploratorio de datos, preprocesamiento, construcción del modelo y evaluación. También puedes utilizar Jupyter Notebooks para documentar y presentar tu trabajo en forma de código y markdown.
 
 ================================================================================
+
 OBS:
-Datos desequilibrados: el conjunto de datos no está equilibrado en términos de la clase de deserción. Esto puede afectar el rendimiento del modelo de aprendizaje automático, ya que puede tener una tendencia a favorecer a la clase mayoritaria. Un enfoque para abordar este desequilibrio es utilizar técnicas de muestreo, como el sobremuestreo (aumento del número de muestras de la clase minoritaria) o el submuestreo (reducción del número de muestras de la clase mayoritaria). Puede considerar la biblioteca de aprendizaje desequilibrado de scikit-learn para realizar estas técnicas.
+## Datos desequilibrados: 
+el conjunto de datos no está equilibrado en términos de la clase de deserción. Esto puede afectar el rendimiento del modelo de aprendizaje automático, ya que puede tener una tendencia a favorecer a la clase mayoritaria. Un enfoque para abordar este desequilibrio es utilizar técnicas de muestreo, como el sobremuestreo (aumento del número de muestras de la clase minoritaria) o el submuestreo (reducción del número de muestras de la clase mayoritaria). Puede considerar la biblioteca de aprendizaje desequilibrado de scikit-learn para realizar estas técnicas.
 
-Recursos de interacción web: las columnas 1 a 9 son recursos de interacción web. Sin embargo, se mencionó que estas columnas están un poco codificadas. En este caso, es importante comprender la naturaleza de estas codificaciones. Si tiene acceso a la información completa sobre estas funciones, puede realizar un análisis adicional para comprender qué significan y cómo pueden afectar las deserciones de los clientes. Según la naturaleza de estas funciones, es posible que deba aplicar técnicas de preprocesamiento adicionales, como la codificación de variables categóricas o la normalización de datos numéricos.
+## Recursos de interacción web: 
+las columnas 1 a 9 son recursos de interacción web. Sin embargo, se mencionó que estas columnas están un poco codificadas. En este caso, es importante comprender la naturaleza de estas codificaciones. Si tiene acceso a la información completa sobre estas funciones, puede realizar un análisis adicional para comprender qué significan y cómo pueden afectar las deserciones de los clientes. Según la naturaleza de estas funciones, es posible que deba aplicar técnicas de preprocesamiento adicionales, como la codificación de variables categóricas o la normalización de datos numéricos.
 
-Selección de funciones: además de las columnas de interacción web, es importante considerar si existen otras funciones relevantes para predecir la deserción de los clientes. Puede explorar técnicas de selección de características, como el análisis de importancia de características, para identificar las variables más relevantes para el problema en cuestión.
+## Selección de funciones: 
+además de las columnas de interacción web, es importante considerar si existen otras funciones relevantes para predecir la deserción de los clientes. Puede explorar técnicas de selección de características, como el análisis de importancia de características, para identificar las variables más relevantes para el problema en cuestión.
 
-Métricas de evaluación: además de las métricas estándar, como exactitud, precisión, recuperación y puntaje F1, puede considerar otras métricas específicas para problemas de clasificación desequilibrada. Algunas métricas útiles incluyen el área bajo la curva ROC (AUC-ROC) y la sensibilidad equilibrada (precisión equilibrada), que consideran la proporción de verdaderos positivos y verdaderos negativos de manera uniforme.
+## Métricas de evaluación: 
+además de las métricas estándar, como exactitud, precisión, recuperación y puntaje F1, puede considerar otras métricas específicas para problemas de clasificación desequilibrada. Algunas métricas útiles incluyen el área bajo la curva ROC (AUC-ROC) y la sensibilidad equilibrada (precisión equilibrada), que consideran la proporción de verdaderos positivos y verdaderos negativos de manera uniforme.
 
 El conjunto de datos tiene las siguientes columnas: "cierres" (datos), "cliente" (identificador de cliente), "deserción" (valor binario que indica deserción) y atributos desde "atributo1" a "atributo9".
 
