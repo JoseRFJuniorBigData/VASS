@@ -56,6 +56,12 @@ En esta etapa, realizaremos las siguientes tareas:
    Si los atributos 1 a 9 están codificados, podemos realizar una decodificación para comprender mejor su significado y facilitar su interpretación durante el modelado.
    ## - Balanceo de datos: 
    Dado que el dataset no está balanceado en términos de la variable objetivo, debemos considerar estrategias para equilibrar los datos antes de entrenar el modelo. Esto podría implicar técnicas como submuestreo de la clase mayoritaria o sobremuestreo de la clase minoritaria.
+   ## - Normalización de atributos numéricos:
+   Antes de continuar con la construcción del modelo de Machine Learning, aplicaremos la normalización a los atributos numéricos (atributo1 a atributo9). La normalización ajusta los valores de estos atributos a un intervalo específico, generalmente entre 0 y 1, para evitar que atributos con escalas muy diferentes tengan un impacto desproporcional en el modelo.
+
+   https://colab.research.google.com/drive/14XPTjmbfxCIOApuV8Zz2JsMVUaLHXkzR
+
+La normalización será realizada utilizando la técnica MinMaxScaler de la biblioteca scikit-learn. Esta técnica garantirá que todos los atributos numéricos estén en la misma escala y evitará sesgos en el modelo debido a atributos con valores más altos. Aquí está el trecho del código Python donde se aplicará la normalización:
 
 # 3. Selección de características: 
 Analizaremos las características disponibles en el dataset y evaluaremos su relevancia para predecir la deserción de los clientes. Podemos utilizar técnicas de selección de características, como la correlación con la variable objetivo o modelos de selección automática de características, para determinar las características más importantes.
