@@ -60,6 +60,7 @@ En esta etapa, realizaremos las siguientes tareas:
 # 3. Selección de características: 
 Analizaremos las características disponibles en el dataset y evaluaremos su relevancia para predecir la deserción de los clientes. Podemos utilizar técnicas de selección de características, como la correlación con la variable objetivo o modelos de selección automática de características, para determinar las características más importantes.
 
+
 # 4. División de datos: 
 Dividiremos el dataset en conjuntos de entrenamiento y prueba. Dado que se menciona que no solo se debe considerar la fecha para la división de datos, podemos utilizar técnicas como la selección aleatoria estratificada o la división temporal combinada con otros criterios.
 
@@ -67,7 +68,22 @@ Dividiremos el dataset en conjuntos de entrenamiento y prueba. Dado que se menci
 Utilizaremos algoritmos de Machine Learning para construir un modelo predictivo de la probabilidad de deserción de los clientes. Algunos algoritmos comunes que podrían ser adecuados para este problema incluyen Regresión Logística, Árboles de Decisión, Bosques Aleatorios o Gradient Boosting. Seleccionaremos el algoritmo y ajustaremos los hiperparámetros utilizando técnicas como la validación cruzada y la búsqueda en cuadrícula para optimizar el rendimiento del modelo.
 
 # 6. Evaluación del modelo: 
-Evaluaremos el modelo utilizando métricas apropiadas para problemas de clasificación binaria, como precisión, recall, F1-score y área bajo la curva ROC (AUC-ROC). También podemos generar una matriz de confusión para tener una visión más detallada de las predicciones del modelo.
+   Evaluaremos el modelo utilizando métricas apropiadas para problemas de clasificación binaria, como precisión, recall, F1-score y área bajo la curva ROC (AUC-ROC). También podemos generar una matriz de confusión para tener una visión más deNormalización de atributos numéricos: dado que sus atributos varían en diferentes escalas, la normalización o estandarización de atributos numéricos (atributo1 a atributo9) ayudará a garantizar que todas las variables estén en la misma escala. Esto es especialmente importante para los algoritmos que son sensibles a la escala de los datos, como los que se basan en la distancia (por ejemplo, k-NN) y los algoritmos de descenso de gradiente.
+
+   ## Extracción de información temporal: 
+   si la columna "cerrar" contiene información de fecha, puede extraer características temporales relevantes, como el día de la semana, el mes, el trimestre o la estación. Esta información puede ayudar al modelo a capturar patrones estacionales o comportamientos cíclicos que pueden afectar la deserción de los clientes.
+
+   ## Creación de variables agregadas: 
+   cree nuevas columnas para representar estadísticas de resumen para los atributos de interacción (atributo1 a atributo9). Puede agregar columnas para la media, máxima, mínima y desviación estándar para cada atributo. Estas características agregadas pueden capturar información importante sobre el comportamiento del cliente.
+
+   ## Creación de variables ficticias: 
+   si la columna "cliente" contiene información categórica, como identificadores de clientes, puede crear variables ficticias para representar cada categoría. Esto permitirá que el modelo capture los efectos de diferentes clientes en la deserción.
+
+   ## Selección de características: 
+   Realice un análisis exploratorio de los datos y, si es posible, aplique técnicas de selección de características para identificar qué atributos son más relevantes para predecir la deserción de los clientes. Esto puede ayudar a reducir la cantidad de funciones y evitar el sobreajuste.
+
+   ## Ingeniería de funciones basada en dominios: 
+   si tiene conocimientos especializados sobre el dominio del problema, utilice esos conocimientos para crear funciones más significativas y relevantes para la predicción. Por ejemplo, si sabe que ciertos comportamientos de los clientes son fuertes indicadores de deserción, cree características específicas para capturar esos comportamientos.tallada de las predicciones del modelo.
 
 # 7. Interpretación del modelo: 
 Si es posible, trataremos de interpretar el modelo para comprender qué características son más influyentes en las predicciones de deserción. Esto puede ayudar a obtener información adicional sobre los factores que contribuyen a la deserción de los clientes.
@@ -117,19 +133,19 @@ incluso sin conocer el significado exacto de los atributos, puede intentar crear
 
  <img src="./img/2.png" alt="Agregación Estadística">
    
-   Identifique atributos relevantes: 
+   # Identifique atributos relevantes: 
    comience identificando qué atributos desea agregar estadísticamente. Esto puede incluir los atributos numéricos disponibles en el conjunto de datos.
 
-   Seleccione estadísticas para calcular: 
+   # Seleccione estadísticas para calcular: 
    elija estadísticas que sean relevantes para su problema. Algunos ejemplos comunes incluyen media, mediana, desviación estándar, mínimo, máximo y conteo. También puede considerar otras estadísticas específicas, según el contexto y los datos.
 
-   Agrupe los datos: 
+   # Agrupe los datos: 
    según la estructura de los datos, es posible que deba agrupar los datos según algunos criterios, como el cliente o el período de tiempo. Por ejemplo, puede calcular estadísticas agregadas para cada cliente o para cada mes.
 
-   Calcular estadísticas: 
+   # Calcular estadísticas: 
    aplica estadísticas seleccionadas a datos agrupados. Utilice funciones estadísticas disponibles en bibliotecas como pandas para calcular las estadísticas deseadas. Por ejemplo, puede usar la función mean() para calcular la media, std() para la desviación estándar y count() para el conteo.
 
-   Crear características agregadas: 
+   # Crear características agregadas: 
    según las estadísticas calculadas, cree nuevas características agregadas para cada grupo. Estas características se agregarán al conjunto de datos como nuevas columnas. Por ejemplo, podría tener una nueva columna llamada "atributo1_promedio" que represente el promedio de "atributo1" para cada cliente.
    
 
