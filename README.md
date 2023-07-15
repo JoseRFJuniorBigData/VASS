@@ -131,7 +131,6 @@ incluso sin conocer el significado exacto de los atributos, puede intentar crear
 ## Agregación estadística: 
  puede calcular varias estadísticas descriptivas de los atributos existentes, como la media, la mediana, la desviación estándar, el mínimo, el máximo y el conteo. Estas estadísticas pueden proporcionar información resumida sobre atributos y ayudar a capturar patrones relevantes.
 
- <img src="./img/2.png" alt="Agregación Estadística">
    
    # Identifique atributos relevantes: 
    comience identificando qué atributos desea agregar estadísticamente. Esto puede incluir los atributos numéricos disponibles en el conjunto de datos.
@@ -147,6 +146,7 @@ incluso sin conocer el significado exacto de los atributos, puede intentar crear
 
    # Crear características agregadas: 
    según las estadísticas calculadas, cree nuevas características agregadas para cada grupo. Estas características se agregarán al conjunto de datos como nuevas columnas. Por ejemplo, podría tener una nueva columna llamada "atributo1_promedio" que represente el promedio de "atributo1" para cada cliente.
+   <img src="./img/2.png" alt="Agregación Estadística">
    
 
    Uso de las características agregadas en el modelo: ahora que ha creado las características agregadas, puede usarlas para entrenar el modelo. Estas nuevas funciones pueden proporcionar información útil para predecir la deserción de clientes y mejorar el rendimiento del modelo.
